@@ -5,8 +5,6 @@ description = "A Tauri App"
 authors = ["you"]
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [lib]
 # The `_lib` suffix may seem redundant but it is necessary
 # to make the lib name unique and wouldn't conflict with the bin name.
@@ -18,9 +16,15 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 tauri-build = { version = "2", features = [] }
 
 [dependencies]
-tauri = { version = "2", features = [] }
+tauri = { version = "=2.2.0", features = [] }
+tauri-build = "=2.0.4"
 tauri-plugin-shell = "2"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
-jiff = { version = "0.1.0", path = "../../jiff" }
+env_logger = "0.11.6"
 
+[dependencies.jiff]
+version = "*"
+git = "https://github.com/BurntSushi/jiff"
+branch = "ag/android"
+features = ["logging"]
