@@ -20,4 +20,7 @@ external tooling to make it work (including spinning up an Android emulator).
 I'm already struggling to keep up with CI breaking because of some random
 WASM failure.
 
+For the actual GitHub CI workflow, see:
+<https://github.com/liveview-native/liveview-native-core/blob/b8643e65072aa95d69d0288b12147f3723e9cc35/.github/workflows/ci.yml#L439-L531>
+
 [Jiff]: https://github.com/BurntSushi/jiff
